@@ -1,26 +1,26 @@
-.signInContainer{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.signInContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.signUptext{
-    font-size: 3rem;
+.signUptext {
+  font-size: 3rem;
 }
 
-.githubBtn{
-    cursor: pointer;
-    border: 0;
-    border-radius: 4px;
-    font-weight: 600;
-    margin: 0 10px;
-    width: 200px;
-    padding: 10px 0;
-    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
-    transition: 0.4s;
+.githubBtn {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
 
   color: rgb(104, 85, 224);
   background-color: rgba(255, 255, 255, 1);
@@ -28,7 +28,7 @@
 }
 
 .githubBtn:hover {
-    color: white;
-    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
-    background-color: rgba(104, 85, 224, 1);
-  }
+  color: white;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+  background-color: rgba(104, 85, 224, 1);
+}
