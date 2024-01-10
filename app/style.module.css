@@ -48,9 +48,18 @@
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
   color: #78c7ff; /* Blue color for welcome text */
+  text-align: center;
 }
 
 .boldText {
   font-weight: bold;
   color: #78c7ff; /* Blue color for bold text */
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+  .welcomeText {
+    font-size: 1.5rem;
+  }
 }
