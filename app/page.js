@@ -1,8 +1,10 @@
+/* page.js */
+
 "use client";
 
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
-import style from "./style.module.css";
+import styles from "./style.module.css";
 import LaunchList from "@/components/LaunchList";
 
 export default function Home() {
@@ -10,37 +12,41 @@ export default function Home() {
 
   if (session) {
     return (
-      <div className="w-full h-screen flex flex-col justify-center items-center">
-        <div className="w-44 h-44 relative mb-4">
-          {/* <Image
-          src={session.user?.image}
-          fill
-          alt=""
-          className="object-cover rounded-full"
-        /> */}
+      <div className={styles.container}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={session.user?.image}
+            width={150}
+            height={150}
+            alt=""
+            className={styles.profileImage}
+          />
         </div>
-        <p className="text-2xl mb-2">
-          Welcome <span className="font-bold">{session.user?.name}</span>.
+        <p className={styles.welcomeText}>
+          Welcome{" "}
+          <span className={styles.boldText}>{session.user?.name}</span>.
           Signed In As
         </p>
-        <p className="font-bold mb-4">{session.user?.email}</p>
+        <p className={styles.emailText}>{session.user?.email}</p>
         <button
-          className="bg-red-600 py-2 px-6 rounded-md"
+          className={`${styles.signOutButton}`}
           onClick={() => signOut()}
         >
           Sign out
         </button>
         <LaunchList />
       </div>
-
     );
   }
 
   return (
-    <div className={style.signInContainer}>
-      <p className={style.signUptext}>Not Signed In</p>
-      <button className={style.githubBtn} onClick={() => signIn("github")}>
-        Sign in with github
+    <div className={styles.container}>
+      <p className={styles.signInText}>Not Signed In</p>
+      <button
+        className={`${styles.githubButton}`}
+        onClick={() => signIn("github")}
+      >
+        Sign in with GitHub
       </button>
     </div>
   );
