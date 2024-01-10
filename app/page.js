@@ -1,5 +1,3 @@
-/* page.js */
-
 "use client";
 
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -23,15 +21,11 @@ export default function Home() {
           />
         </div>
         <p className={styles.welcomeText}>
-          Welcome{" "}
-          <span className={styles.boldText}>{session.user?.name}</span>.
+          Welcome <span className={styles.boldText}>{session.user?.name}</span>.
           Signed In As
         </p>
         <p className={styles.emailText}>{session.user?.email}</p>
-        <button
-          className={`${styles.signOutButton}`}
-          onClick={() => signOut()}
-        >
+        <button className={`${styles.signOutButton}`} onClick={() => signOut()}>
           Sign out
         </button>
         <LaunchList />

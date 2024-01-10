@@ -15,10 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <SessionWrapper>
       <ReduxProvider>
-
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
+        <html lang="en">
+          <body className={inter.className}>{children}</body>
+        </html>
       </ReduxProvider>
     </SessionWrapper>
   );

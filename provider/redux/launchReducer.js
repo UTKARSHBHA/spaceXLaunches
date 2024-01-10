@@ -1,12 +1,10 @@
-// store/launchReducer.js
-
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const launchSlice = createSlice({
-  name: 'launch',
+  name: "launch",
   initialState: {
     launches: [],
-    filter: 'all', // 'all', 'upcoming', 'past', 'custom'
+    filter: "all",
     startDate: null,
     endDate: null,
   },
@@ -18,7 +16,7 @@ const launchSlice = createSlice({
       state.filter = action.payload;
     },
     setCustomFilter: (state, action) => {
-      state.filter = 'custom'; // Set the filter to 'custom'
+      state.filter = "custom";
       state.startDate = action.payload.startDate;
       state.endDate = action.payload.endDate;
     },

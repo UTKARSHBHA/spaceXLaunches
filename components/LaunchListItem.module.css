@@ -1,24 +1,19 @@
-/* components/LaunchListItem.module.css */
-
 .launch-item {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 1.5rem;
-    /* margin-bottom: 1.5rem; */
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /* gap: 1rem; */
-  }
-  
-  .launch-image {
-    width: 100%; /* Take 100% of the container width */
-    max-width: 150px; /* Set a maximum width to avoid stretching on larger screens */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: cover; /* Ensure the image covers the specified dimensions */
-    border-radius: 50%; /* Make the image circular */
-    margin-bottom: 1rem;
-  }
-  
+  background-color: #333333;
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.launch-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

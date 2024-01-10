@@ -1,5 +1,3 @@
-// store/actions.js
-
 import { fetchLaunchData } from "@/services/api";
 import { setLaunches } from "./launchReducer";
 
@@ -9,7 +7,6 @@ export const fetchAndSetLaunches =
     try {
       const launches = await fetchLaunchData();
 
-      // Apply filtering based on the 'filter' parameter
       const filteredLaunches = filterLaunches(
         launches,
         filter,
@@ -31,7 +28,6 @@ const filterLaunches = (launches, filter, startDate, endDate) => {
   } else if (filter === "past") {
     return launches.filter((launch) => new Date(launch.date_utc) <= now);
   } else if (filter === "custom") {
-    console.log(startDate , endDate);
     if (startDate && endDate) {
       const start = new Date(startDate);
       const end = new Date(endDate);
